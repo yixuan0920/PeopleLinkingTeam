@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Basic">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="notification1"
+            android:title="Notification" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="notification2"
+            android:title="Notification" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Advanced">
+
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="nameInput"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Change name" />
+        <EditTextPreference
+            android:defaultValue="******"
+            android:key="emailInput"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Change email" />
+        <EditTextPreference
+            android:defaultValue="******"
+            android:key="passwordInput"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Change Password" />
+        <EditTextPreference
+            android:defaultValue="******"
+            android:key="phoneInput"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Change phone" />
+        <EditTextPreference
+            android:defaultValue="******"
+            android:key="addressInput"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Change address" />
+        <ListPreference
+            android:defaultValue="BM"
+            android:entries="@array/languages"
+            android:entryValues="@array/languages"
+            android:key="languages"
+            android:title="Select language" />
+        <ListPreference
+            android:defaultValue="light"
+            android:entries="@array/modes"
+            android:entryValues="@array/modes"
+            android:key="modes"
+            android:title="Select mode" />
+        <ListPreference
+            android:defaultValue="Kuala Lumpur"
+            android:entries="@array/timezones"
+            android:entryValues="@array/timezones"
+            android:key="timezones"
+            android:title="Select Time Zone" />
+    </PreferenceCategory>
+</PreferenceScreen>

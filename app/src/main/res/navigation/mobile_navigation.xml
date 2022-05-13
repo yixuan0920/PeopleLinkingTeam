@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.fragmentnavigationbottom.ui.home.HomeFragment"
+        android:label="Homepage"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_report"
+            app:destination="@id/navigation_report" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_report"
+        android:name="com.example.fragmentnavigationbottom.ui.home.ReportFragment"
+        android:label="Reportpage"
+        tools:layout="@layout/fragment_report" >
+        <action
+            android:id="@+id/action_navigation_report_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.example.fragmentnavigationbottom.ui.history.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_navigation_history_to_navigation_scan"
+            app:destination="@id/navigation_scan" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_scan"
+        android:name="com.example.fragmentnavigationbottom.ui.scan.ScanFragment"
+        android:label="Scan"
+        tools:layout="@layout/fragment_scan" >
+    <action
+    android:id="@+id/action_navigation_scan_to_navigation_history"
+    app:destination="@id/navigation_history" />
+        <action
+            android:id="@+id/action_navigation_scan_to_navigation_qr_scan"
+            app:destination="@id/navigation_qr_scan" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_qr_scan"
+        android:name="com.example.fragmentnavigationbottom.ui.scan.QrScanningFragment"
+        android:label="QrScan"
+        tools:layout="@layout/fragment_qr_scanning">
+        <action
+            android:id="@+id/action_navigation_qr_scan_to_navigation_scan"
+            app:destination="@id/navigation_scan" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_hotspot"
+        android:name="com.example.fragmentnavigationbottom.ui.hotspot.HotspotFragment"
+        android:label="Hotspot"
+        tools:layout="@layout/fragment_hotspot" />
+
+    <fragment
+        android:id="@+id/navigation_edit_profile"
+        android:name="com.example.fragmentnavigationbottom.ui.profile.EditProfileFragment"
+        android:label="EditProfile"
+        tools:layout="@layout/fragment_edit_profile"
+        >
+        <action
+            android:id="@+id/action_navigation_edit_profile_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.fragmentnavigationbottom.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile"
+        >
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_edit_profile"
+            app:destination="@id/navigation_edit_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_statistics"
+        android:name="com.example.fragmentnavigationbottom.ui.statistics.StatisticsFragment"
+        android:label="Statistics"
+        tools:layout="@layout/fragment_statistics" >
+        <action
+            android:id="@+id/action_navigation_statistics_to_navigation_statistics_local"
+            app:destination="@id/navigation_statistics_local" />
+        <action
+            android:id="@+id/action_navigation_statistics_to_navigation_statistics_global"
+            app:destination="@id/navigation_statistics_global" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_statistics_global"
+        android:name="com.example.fragmentnavigationbottom.ui.statistics_global.StatisticsGlobalFragment"
+        android:label="StatisticsGlobal"
+        tools:layout="@layout/fragment_statistics_global" >
+        <action
+            android:id="@+id/action_navigation_statistics_global_to_navigation_statistics"
+            app:destination="@id/navigation_statistics" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_statistics_local"
+        android:name="com.example.fragmentnavigationbottom.ui.statistics_local.StatisticsLocalFragment"
+        android:label="StatisticsLocal"
+        tools:layout="@layout/fragment_statistics_local" >
+        <action
+            android:id="@+id/action_navigation_statistics_local_to_navigation_statistics"
+            app:destination="@id/navigation_statistics" />
+    </fragment>
+
+</navigation>
